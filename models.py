@@ -1,4 +1,4 @@
-from sqlmodel import Field, SQLModel, Session,create_engine
+from sqlmodel import Field, SQLModel, Session, create_engine
 
 class user(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
@@ -17,13 +17,13 @@ class Reward(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     item_name: str
     item_value: str
-    user_item: int = Field(foreign_key="user.id")
+    
 
 class Punishment(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     punishment_name: str
     punishment: str
-    punishment_item: int = Field(foreign_key="user.id") 
+    
 
 class Days(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
