@@ -1,4 +1,4 @@
-from sqlmodel import Field, SQLModel, create_engine
+from sqlmodel import Field, SQLModel, Session,create_engine
 
 class user(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
@@ -28,11 +28,6 @@ class Punishment(SQLModel, table=True):
 class Days(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     day: str
-
-
-
-
-
 
 
 postgres_url = "postgresql://postgres:Packers0192!@localhost:5432/class_project"
