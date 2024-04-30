@@ -1,3 +1,4 @@
 alembic
 sqlmodel
 psycopg2
+uvicorn
