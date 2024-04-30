@@ -1,6 +1,6 @@
 from sqlmodel import Field, SQLModel, create_engine
 
-class Hero(SQLModel, table=True):
+class user(SQLModel, table=True):
     id: int | None = Field(default = None, primary_key = True)
     first_name: str
     last_name: str
