@@ -1,6 +1,6 @@
 from sqlmodel import Field, SQLModel, Session, create_engine
 
-class user(SQLModel, table=True):
+class User(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     first_name: str
     last_name: str
@@ -11,25 +11,21 @@ class Workout(SQLModel, table=True):
     name: str
     set: int
     rep: int
-    help_video: str
 
 class Reward(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     item_name: str
-    item_value: str
     
-
+    
 class Punishment(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     punishment_name: str
     punishment: str
+    #implement later punishment_severity: int
     
 
-class Days(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True)
+class Schedual(SQLModel, table=True):
     day: str
-
-
-postgres_url = "postgresql://postgres:Packers0192!@localhost:5432/class_project"
-
-engine = create_engine(postgres_url, echo = True)
+    wourkout_id: int = Field(foreign_key="workout.id", primary_key=True)
+    is_completed: bool
+    #set up composite key for date and workout id

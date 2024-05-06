@@ -1,5 +1,5 @@
-from sqlmodel import Field, SQLModel, Session, create_engine
-from models import user, Workout, Reward, Punishment, Days
+from sqlmodel import SQLModel, Session, create_engine
+from models import Reward
 
 
 postgres_url = "postgresql://postgres:Packers0192!@localhost:5432/class_project"
