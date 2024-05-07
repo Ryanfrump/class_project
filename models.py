@@ -22,6 +22,10 @@ class Punishment(SQLModel, table=True):
     punishment_name: str
     punishment: str
     #implement later punishment_severity: int
+
+class Date(SQLModel, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    day: str
     
 
 class Schedual(SQLModel, table=True):
