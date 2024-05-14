@@ -3,3 +3,5 @@ sqlmodel
 psycopg2
 uvicorn
 fastapi
+requests
+pytest

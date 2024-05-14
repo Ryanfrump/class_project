@@ -38,4 +38,4 @@ class Schedual(SQLModel, table=True):
     satuday:int = Field(foreign_key="musclegroup.id")
     user_id: int = Field(foreign_key="user.id", primary_key=True)
     is_completed: bool
-    #set up composite key for date and workout id
+    
