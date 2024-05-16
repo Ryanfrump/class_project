@@ -6,7 +6,7 @@ Welcome to the Workout API setup guide! Follow these steps to get started with u
    First, clone the GitHub repository to your local machine using the following command:
 
    ```bash
-   git clone (https://github.com/Ryanfrump/class_project)
+   git clone (https://github.com/Ryanfrump/class_project.git)
    ```
 
 2. **Install Requirements:**  
